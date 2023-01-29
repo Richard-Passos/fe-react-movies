@@ -19,13 +19,13 @@ const BASE_URL_IMG = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2";
 export default function Detail() {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
-  const [videoURL, setVideoURL] = useState("");
+  const [videoURL, setVideoURL] = useState("")
 
-  function getUrl() {
+  function getURL(title) {
     /* Fix title */
-    const titleString = JSON.stringify(movie.title);
+    const titleString = JSON.stringify(title);
     let newTitle = "";
-    for (let i = 0; i < titleString.length; i++) {
+    for (let i = 0; i < titleString?.length; i++) {
       const currentSpace = titleString[i];
 
       if (currentSpace === '"') {
@@ -45,7 +45,11 @@ export default function Detail() {
 
   useEffect(() => {
     getDetail(id, setMovie);
-  }, [id]);
+  }, [id])
+
+  useEffect(() => {
+    setVideoURL(getURL(movie.title));
+  }, [movie])
 
   return (
     <>
@@ -85,7 +89,7 @@ export default function Detail() {
             </ContainerExtra>
 
             <div>
-              <Link to={videoURL} onMouseOver={() => setVideoURL(getUrl())}>
+              <Link to={videoURL}>
                 <BtnTrailer>Trailer</BtnTrailer>
               </Link>
             </div>
