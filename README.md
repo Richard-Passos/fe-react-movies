@@ -1,7 +1,7 @@
 <h1 align="center">:file_cabinet: Fullflix</h1>
 
 ## :memo: Descrição
-Desafio Fulltur, fazer site de filmes com api axios e styled-components.
+Desafio Fullture, fazer site de filmes com api axios e styled-components.
 
 ## :wrench: Tecnologias utilizadas
 * HTML;
