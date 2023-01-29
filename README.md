@@ -1,7 +1,7 @@
-<h1 align="center">:file_cabinet: Todo List</h1>
+<h1 align="center">:file_cabinet: Fullflix</h1>
 
 ## :memo: Descrição
-Desafio Fullture para fazer uma Todo List com Login e Register Page
+Desafio Fulltur, fazer site de filmes com api axios e styled-components.
 
 ## :wrench: Tecnologias utilizadas
 * HTML;
