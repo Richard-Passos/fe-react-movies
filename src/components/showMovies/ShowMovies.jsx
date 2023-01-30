@@ -23,7 +23,7 @@ export default function ShowMovies() {
     <Container>
       <SectionMovie subtitle="Popular" movieType={popularMovies} />
       <SectionMovie subtitle="Melhores avaliados" movieType={topRatedMovies} />
-      <SectionMovie subtitle="No cinema" movieType={cinemaMovies} />
+      <SectionMovie subtitle="Em cartaz" movieType={cinemaMovies} />
       <SectionMovie subtitle="Em breve" movieType={comingSoonMovies} />
     </Container>
   );
