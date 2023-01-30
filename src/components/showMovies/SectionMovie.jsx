@@ -17,8 +17,8 @@ export default function SectionMovie({ subtitle, movieType }) {
     return moviesType.map(({ id, poster_path, title }) => (
       <SwiperSlide
         tag="li"
-        key={id + "swiper_slide"}
-        id={id + "swiper_slide"}
+        key={"key" + id}
+        id={"id" + id}
         className="listItem"
       >
         <Link to={`/detail/${id}`}>
@@ -30,7 +30,7 @@ export default function SectionMovie({ subtitle, movieType }) {
 
   return (
     <section>
-      <Subtitle>{subtitle}</Subtitle>
+      <Subtitle translate="no">{subtitle}</Subtitle>
       <ContainerMovies 
         tag="div"
         wrapperTag="ul"
