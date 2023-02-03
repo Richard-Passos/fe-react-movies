@@ -14,7 +14,7 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 5rem;
 
   section {
     width: 100%;
