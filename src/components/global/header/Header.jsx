@@ -1,13 +1,15 @@
-/* Styles */
+/* Style */
+import { MainHeader, Logo } from "./HeaderStyle";
 import { Link } from "react-router-dom";
-import { Header as HeaderStyled, Logo } from "./HeaderStyle";
 
-export default function Header() {
+function Header() {
   return (
-    <HeaderStyled>
+    <MainHeader>
       <Link to={`/`}>
         <Logo>Fullflix</Logo>
       </Link>
-    </HeaderStyled>
+    </MainHeader>
   );
 }
+
+export default Header;

@@ -1,8 +1,10 @@
+/* Style */
+import Home from "../pages/home/Home";
+import Detail from "../pages/detail/Detail";
+import ErrorPage from "../pages/errorPage/ErrorPage";
+
 /* Logic */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Detail from "../../pages/detail/Detail";
-import ErrorPage from "../../pages/errorPage/ErrorPage";
-import Home from "../../pages/home/Home";
 
 export default function Router() {
   return(

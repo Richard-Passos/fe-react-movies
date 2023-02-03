@@ -1,11 +1,8 @@
-/* Logic */
-import './App.css';
-import Router from './assets/router/Router';
+/* Style */
+import Router from './router/Router';
 
 function App() {
-  return (
-    <Router/>
-  );
+  return <Router />;
 }
 
 export default App;

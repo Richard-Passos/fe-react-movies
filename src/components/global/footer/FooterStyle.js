@@ -1,9 +1,12 @@
-import styled from "styled-components";
-import { Colors } from "../../../assets/Colors";
+/* Style */
+import { Colors } from "../../../assets/stylesGlobal/Colors";
 
-export const Footer = styled.footer`
+/* Logic */
+import styled from "styled-components";
+
+export const MainFooter = styled.footer`
   width: 100%;
-  max-width: 150rem;
+  max-width: 200rem;
   margin: 0 auto;
   padding: 1rem;
 

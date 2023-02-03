@@ -1,10 +1,12 @@
-/* Styles */
-import { Footer as FooterStyled } from "./FooterStyle";
+/* Style */
+import { MainFooter } from "./FooterStyle";
 
-export default function Footer() {
+function Footer() {
   return (
-    <FooterStyled>
+    <MainFooter>
       <p>React Movies @ 2023. Todos os direitos reservados.</p>
-    </FooterStyled>
+    </MainFooter>
   );
 }
+
+export default Footer;

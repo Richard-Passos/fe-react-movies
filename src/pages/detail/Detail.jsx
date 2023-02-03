@@ -1,104 +1,84 @@
-/* Styles */
+/* Style */
 import Header from "../../components/global/header/Header";
 import Footer from "../../components/global/footer/Footer";
-import {
-  ContainerDetails,
-  ContainerImg,
-  ContainerText,
-  ContainerExtra,
-} from "./containersStyle";
-import { BtnTrailer, Link, ButtonHome } from "./buttonsStyle";
+import { ContainerDetails } from "./containersStyle/CDetails";
+import { ContainerImg } from "./containersStyle/CImg";
+import { ContainerText, Sinopse, Genre } from "./containersStyle/CTextStyle";
+import { ContainerExtra } from "./containersStyle/CExtra";
+import { BtnTrailer, ButtonHome } from "./buttonsStyle";
 
 /* Logic */
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getDetail } from "../../api/axios";
+import { getDetail } from "../../services/api/themoviedb";
+import getURL from "./getURL";
 
 const BASE_URL_IMG = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2";
 
 export default function Detail() {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
-  const [videoURL, setVideoURL] = useState("")
-
-  function getURL(title) {
-    /* Fix title */
-    const titleString = JSON.stringify(title);
-    let newTitle = "";
-    for (let i = 0; i < titleString?.length; i++) {
-      const currentSpace = titleString[i];
-
-      if (currentSpace === '"') {
-        newTitle += "";
-      } else {
-        if (currentSpace === " ") {
-          newTitle += "+";
-        } else {
-          newTitle += titleString[i];
-        }
-      }
-    }
-
-    /* Trailer url */
-    return `https://www.youtube.com/results?search_query=${newTitle}+trailer+oficial`;
-  }
+  const [videoURL, setVideoURL] = useState("");
 
   useEffect(() => {
     getDetail(id, setMovie);
-  }, [id])
+  }, [id]);
 
   useEffect(() => {
     setVideoURL(getURL(movie.title));
-  }, [movie])
+  }, [movie]);
 
   return (
     <>
       <Header />
-      <ContainerDetails>
+      <ContainerDetails className="bg-img">
         <ContainerImg>
           <img src={BASE_URL_IMG + movie.poster_path} alt={movie.title} />
         </ContainerImg>
 
-        <div className="spaceBetween">
-          <ContainerText>
-            <p className="title">{movie.title}</p>
+        <ContainerText>
+          <p className="title">{movie.title}</p>
 
-            <div className="genres paddingLeft">
-              {movie.genres?.map(({ name }) => (
-                <span key={"key" + name} id={"id" + name} className="genre">
-                  {name}
-                </span>
-              ))}
-            </div>
+          <div className="genres">
+            {movie.genres?.map(({ name }) => (
+              <Genre key={"key" + name} id={"id" + name}>
+                {name}
+              </Genre>
+            ))}
+          </div>
 
-            <div className="sinopse">
-              <h4 className="subtitle">Sinopse</h4>
-              <p className="description paddingLeft">
-                {movie.overview || "Descrição não encontrada em protuguês"}
-              </p>
+          <Sinopse>
+            <p className="subtitle">Sinopse</p>
+
+            <p className="description">
+              {movie.overview || "Descrição não encontrada em protuguês"}
+            </p>
+          </Sinopse>
+
+          <ContainerExtra>
+            <div>
+              <span className="darkRed">Nota</span>
+              <p>{movie.vote_average}</p>
             </div>
-            <ContainerExtra>
-              <div className="voteAverage">
-                <span className="darkRed">Nota</span>
-                <p>{movie.vote_average}</p>
-              </div>
-              <div className="runtime">
-                <span className="darkRed">Tempo</span>
-                <p>{movie.runtime}m</p>
-              </div>
-            </ContainerExtra>
 
             <div>
-              <Link to={videoURL}>
-                <BtnTrailer>Trailer</BtnTrailer>
-              </Link>
+              <span className="darkRed">Tempo</span>
+              <p>{movie.runtime}m</p>
             </div>
-          </ContainerText>
+          </ContainerExtra>
 
-          <Link to={"/"}>
-            <ButtonHome>Go Home</ButtonHome>
-          </Link>
-        </div>
+          <div>
+            <Link to={videoURL}>
+              <BtnTrailer>Trailer</BtnTrailer>
+            </Link>
+          </div>
+
+          <div className="alignCenter">
+            <Link to={"/"}>
+              <ButtonHome>Go Home</ButtonHome>
+            </Link>
+          </div>
+        </ContainerText>
       </ContainerDetails>
       <Footer />
     </>

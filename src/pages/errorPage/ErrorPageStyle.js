@@ -1,5 +1,8 @@
+/* Style */
+import { Colors } from "../../assets/stylesGlobal/Colors";
+
+/* Logic */
 import styled from "styled-components";
-import { Colors } from "../../assets/Colors";
 
 export const MainContaier = styled.main`
   width: 100%;

@@ -1,12 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/* Style */
+import GlobalStyle from "./assets/stylesGlobal/globalStyle";
+import ResetStyle from "./assets/stylesGlobal/resetStyle";
+import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+/* Logic */
+import React from "react";
+import ReactDOM from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <ResetStyle /> {/* reset-css */}
+    <GlobalStyle /> {/* global-css */}
     <App />
   </React.StrictMode>
 );
