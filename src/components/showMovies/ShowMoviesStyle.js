@@ -43,7 +43,7 @@ export const ContainerMovies = styled(Swiper)`
     }
 `;
 
-export const Subtitle = styled.span`
+export const Subtitle = styled.h2`
   font-size: 2rem;
   color: ${Colors.white};
 `
