@@ -7,9 +7,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="bg-img">
-        <ShowMovies/>
-      </div>
+      <ShowMovies />
       <Footer />
     </>
   );

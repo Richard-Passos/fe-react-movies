@@ -13,7 +13,7 @@ export const ContainerDetails = styled.div`
   height: fit-content;
 
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   gap: 3rem 5rem;
 

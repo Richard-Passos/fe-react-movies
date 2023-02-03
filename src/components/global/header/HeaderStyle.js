@@ -19,10 +19,12 @@ export const MainHeader = styled.header`
 export const Logo = styled.span`
   color: ${Colors.darkRed};
   font-size: 3.5rem;
+  letter-spacing: .5rem;
   transition: all .2s ease;
 
   :hover {
     cursor: pointer;
     color: ${Colors.lightRed};
+    
   }
 `;

@@ -1,6 +1,7 @@
+/* Style */
 import { createGlobalStyle } from "styled-components";
-import bgImg from "../img/backgroundImg.svg"
 import { Colors } from "./Colors";
+import bgImg from "../img/backgroundImg.svg"
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -13,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     min-height: 100vh;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     background: radial-gradient(at 30% top, #30172a 0%, rgba(3, 37, 65, 1));
     overflow-x: hidden;
     color: ${Colors.darkGray};

@@ -20,5 +20,6 @@ export const MainFooter = styled.footer`
     font-size: 1.2rem;
     color: ${Colors.white};
     letter-spacing: .2rem;
+    line-height: 1.5;
   }
 `;

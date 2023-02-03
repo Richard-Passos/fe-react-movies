@@ -20,7 +20,7 @@ export default function ShowMovies() {
   }, []);
 
   return (
-    <Container>
+    <Container className="bg-img">
       <SectionMovie subtitle="Popular" movieType={popularMovies} />
       <SectionMovie subtitle="Melhores avaliados" movieType={topRatedMovies} />
       <SectionMovie subtitle="Em cartaz" movieType={cinemaMovies} />
