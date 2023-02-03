@@ -1,10 +1,13 @@
-import styled from "styled-components";
+/* Style */
+import { Colors } from "../../assets/stylesGlobal/Colors";
 import { Swiper } from "swiper/react";
-import { Colors } from "../../assets/Colors";
+
+/* Logic */
+import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 150rem;
+  max-width: 200rem;
   margin: 0 auto;
   min-height: 85vh;
   padding: 2rem 5rem;

@@ -1,10 +1,10 @@
-/* Styles */
+/* Style */
 import { Container } from "./ShowMoviesStyle";
+import SectionMovie from "./SectionMovie";
 
 /* Logic */
 import { useEffect, useState } from "react";
-import { getMovies } from "../../api/axios";
-import SectionMovie from "./SectionMovie";
+import { getMovies } from "../../services/api/themoviedb";
 
 export default function ShowMovies() {
   const [popularMovies, setPopularMovies] = useState([]);
