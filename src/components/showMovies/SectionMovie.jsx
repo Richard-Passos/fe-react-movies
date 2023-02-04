@@ -14,18 +14,20 @@ const BASE_URL_IMG = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2";
 export default function SectionMovie({ subtitle, movieType }) {
 
   function showMoviesOnDOM(moviesType) {
-    return moviesType.map(({ id, poster_path, title }) => (
-      <SwiperSlide
-        tag="li"
-        key={"key SwiperSlide " + id}
-        id={"id SwiperSlide " + id}
-        className="listItem"
-      >
-        <Link to={`/detail/${id}`}>
-          <MovieImg src={BASE_URL_IMG + poster_path} alt={title} />
-        </Link>
-      </SwiperSlide>
-    ));
+    return !moviesType
+      ? "Loading"
+      : moviesType.map(({ id, poster_path, title }) => (
+          <SwiperSlide
+            tag="li"
+            key={"key SwiperSlide " + id}
+            id={"id SwiperSlide " + id}
+            className="listItem"
+          >
+            <Link to={`/detail/${id}`}>
+              <MovieImg src={BASE_URL_IMG + poster_path} alt={title} />
+            </Link>
+          </SwiperSlide>
+        ));
   }
 
   return (
