@@ -82,7 +82,7 @@ export const Genre = styled.span`
 export const Sinopse = styled.div`
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
 
   .subtitle {
     font-size: 2rem;
@@ -93,5 +93,17 @@ export const Sinopse = styled.div`
     overflow-y: auto;
     padding-left: 0.5rem;
     line-height: 1.5;
+
+    /* ScrollBar style */
+    ::-webkit-scrollbar {
+      width: 10px;
+      background-color: #000;
+    }
+    ::-webkit-scrollbar-track {
+      background-color: ${Colors.darkGray};
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: ${Colors.lightRed};
+    }
   }
 `;
