@@ -1,7 +1,9 @@
 /* Style */
-import { createGlobalStyle } from "styled-components";
 import { Colors } from "./Colors";
 import bgImg from "../img/backgroundImg.svg"
+
+/* Logic */
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -18,6 +20,18 @@ const GlobalStyle = createGlobalStyle`
     background: radial-gradient(at 30% top, #30172a 0%, rgba(3, 37, 65, 1));
     overflow-x: hidden;
     color: ${Colors.darkGray};
+
+    /* ScrollBar style */
+    ::-webkit-scrollbar {
+      width: 5px;
+      background-color: #000;
+    }
+    ::-webkit-scrollbar-track {
+      background-color: ${Colors.darkGray};
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: ${Colors.lightRed};
+    }
   }
 
   .bg-img {
@@ -33,29 +47,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   /* Switching the swipers buttons styles*/
-  .swiper-slide {
-    width: initial !important;
-  }
-
-  .swiper-button-prev, .swiper-button-next {
-    color: ${Colors.white} !important;
-    opacity: 1 !important;
-    cursor: pointer !important;
-    width: 60px !important;
-    height: 60px !important;
-    border-radius: 100% !important;
-  }
-  .swiper-button-prev:hover, .swiper-button-next:hover {
-    background-color: rgba(16, 17, 18, .5) /*Colors.darkGray*/ !important;
-  }
-
-  .swiper-button-prev {
-    left: -5px !important;
-  }
-
-  .swiper-button-next {
-    right: -5px !important;
-  }
 `;
 
 export default GlobalStyle;

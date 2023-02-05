@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 export const ContainerImg = styled.picture`
   width: 100%;
-  max-width: 40rem;
+  max-width: 39rem;
 
   img {
     width: 100%;

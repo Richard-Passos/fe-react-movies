@@ -6,7 +6,16 @@ function Header() {
   return (
     <MainHeader>
       <Link to={`/`}>
-        <Logo>Fullflix</Logo>
+        <Logo>
+          <span>F</span>
+          <span>U</span>
+          <span>L</span>
+          <span>L</span>
+          <span>F</span>
+          <span>L</span>
+          <span>I</span>
+          <span>X</span>
+        </Logo>
       </Link>
     </MainHeader>
   );

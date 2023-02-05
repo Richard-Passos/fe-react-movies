@@ -1,7 +1,7 @@
 /* Logic */
 import axios from "axios"
 
-export const getMovies = (setState, type) => {
+export const  getMovies = (setState, type) => {
   axios
     .get(
       `https://api.themoviedb.org/3/movie/${type}?api_key=b681b7a1ecdbcf0bbb1bc98e9edd99ef&language=pt-BR&page=1&region=US`
@@ -21,4 +21,15 @@ export const getDetail = (movieId, setState) => {
       setState(data)
     })
     .catch((error) => console.log(error));
+};
+
+export const getVideo = (movieId, setState) => {
+  axios
+    .get(
+      `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=b681b7a1ecdbcf0bbb1bc98e9edd99ef&language=pt-BR&page=1&region=BR`
+    )
+    .then(({ data }) => {
+      setState(data.results);
+    })
+    .catch((error) => setState(null));
 };

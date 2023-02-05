@@ -10,23 +10,26 @@ import { BtnTrailer, ButtonHome } from "./buttonsStyle";
 /* Logic */
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getDetail } from "../../services/api/themoviedb";
-import getURL from "./getURL";
+import { getDetail, getVideo } from "../../services/api/themoviedb";
 
 const BASE_URL_IMG = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2";
+const BASE_URL_VIDEO = "https://www.youtube.com/watch?v=";
 
 export default function Detail() {
   const { id } = useParams();
+
   const [movie, setMovie] = useState({});
-  const [videoURL, setVideoURL] = useState("");
+  const [video, setVideo] = useState([]);
 
   useEffect(() => {
     getDetail(id, setMovie);
   }, [id]);
 
   useEffect(() => {
-    setVideoURL(getURL(movie.title));
+    getVideo(movie.id, setVideo);
   }, [movie]);
+
+  console.log(video)
 
   return (
     <>
@@ -67,11 +70,21 @@ export default function Detail() {
             </div>
           </ContainerExtra>
 
-          <div>
-            <Link to={videoURL}>
-              <BtnTrailer>Trailer</BtnTrailer>
-            </Link>
-          </div>
+          {!video ? (
+            <></>
+          ) : (
+            <div>
+              <Link
+                to={
+                  video[1]?.key !== undefined
+                  ? BASE_URL_VIDEO + video[1]?.key
+                  : BASE_URL_VIDEO + video[0]?.key
+                }
+              >
+                <BtnTrailer>Trailer</BtnTrailer>
+              </Link>
+            </div>
+          )}
 
           <div className="alignCenter">
             <Link to={"/"}>

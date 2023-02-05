@@ -3,7 +3,6 @@ import { MainContaier } from "./ErrorPageStyle";
 import { Link } from "react-router-dom";
 import { ButtonHome } from "../detail/buttonsStyle";
 
-
 export default function ErrorPage() {
   return(
     <>

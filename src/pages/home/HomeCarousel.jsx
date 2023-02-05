@@ -1,12 +1,12 @@
 /* Style */
-import { Container } from "./ShowMoviesStyle";
-import SectionMovie from "./SectionMovie";
+import { Container } from "./HomeCarouselStyle";
+import Carousel from "../../components/carousel/Carousel";
 
 /* Logic */
 import { useEffect, useState } from "react";
 import { getMovies } from "../../services/api/themoviedb";
 
-export default function ShowMovies() {
+export default function HomeCarousel() {
   const [popularMovies, setPopularMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
   const [cinemaMovies, setCinemaMovies] = useState([]);
@@ -21,10 +21,10 @@ export default function ShowMovies() {
 
   return (
     <Container className="bg-img">
-      <SectionMovie subtitle="Popular" movieType={popularMovies} />
-      <SectionMovie subtitle="Melhores avaliados" movieType={topRatedMovies} />
-      <SectionMovie subtitle="Em cartaz" movieType={cinemaMovies} />
-      <SectionMovie subtitle="Em breve" movieType={comingSoonMovies} />
+      <Carousel subtitle="Popular" movies={popularMovies} />
+      <Carousel subtitle="Melhores avaliados" movies={topRatedMovies} />
+      <Carousel subtitle="Em cartaz" movies={cinemaMovies} />
+      <Carousel subtitle="Em breve" movies={comingSoonMovies} />
     </Container>
   );
 }

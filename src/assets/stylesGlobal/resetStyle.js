@@ -1,3 +1,4 @@
+/* Logic */
 import { createGlobalStyle } from "styled-components";
 
 const ResetStyle = createGlobalStyle`
