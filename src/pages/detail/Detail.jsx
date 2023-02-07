@@ -34,7 +34,7 @@ export default function Detail() {
   return (
     <>
       <Header />
-      <ContainerDetails className="bg-img">
+      <ContainerDetails className="darkRed">
         <ContainerImg>
           <img src={BASE_URL_IMG + movie.poster_path} alt={movie.title} />
         </ContainerImg>

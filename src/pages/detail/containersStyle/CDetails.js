@@ -7,7 +7,7 @@ import styled from "styled-components";
 export const ContainerDetails = styled.div`
   width: 100%;
   max-width: 200rem;
-  margin: 0 auto;
+  margin: 5rem auto 0;
   padding: 3.5rem;
   border-radius: 0.5rem;
   height: fit-content;

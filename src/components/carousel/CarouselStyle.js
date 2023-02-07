@@ -29,6 +29,10 @@ export const MainCarousel = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
+
+  @media screen and (max-width: 600px) {
+    margin: 0;
+  }
 `;
 
 export const Arrow = styled.div`
@@ -37,7 +41,7 @@ export const Arrow = styled.div`
   padding: 0 2.5rem;
   border-radius: 100%;
   font-size: 5rem;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   position: absolute;
   top: 40%;
   z-index: 3;
@@ -50,6 +54,10 @@ export const Arrow = styled.div`
     cursor: pointer;
     color: ${Colors.lightRed};
     background-color: rgba(16, 17, 18, 0.35) /* Colors.darkGray */;
+  }
+
+  @media screen and (max-width: 600px) {
+    display: none;
   }
 
   &.prev {

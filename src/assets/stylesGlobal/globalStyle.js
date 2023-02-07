@@ -21,6 +21,11 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     color: ${Colors.darkGray};
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     /* ScrollBar style */
     ::-webkit-scrollbar {
       width: 5px;
@@ -38,12 +43,8 @@ const GlobalStyle = createGlobalStyle`
     background-image: url(${bgImg});
   }
 
-  #root {
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .bg-black {
+    background-color: rgba(16,17,18, 0.5);
   }
 
   /* Switching the swipers buttons styles*/
