@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ResetStyle /> {/* reset-css */}
-    <GlobalStyle /> {/* global-css */}
+    <GlobalStyle />{/* global-css */}
     <App />
   </React.StrictMode>
 );
