@@ -1,6 +1,6 @@
 /* Style */
 import { Colors } from "./Colors";
-import bgImg from "../img/backgroundImg.svg"
+import bgImg from "../imgs/backgroundImg.svg";
 
 /* Logic */
 import { createGlobalStyle } from "styled-components";
@@ -37,17 +37,25 @@ const GlobalStyle = createGlobalStyle`
     ::-webkit-scrollbar-thumb {
       background-color: ${Colors.lightRed};
     }
+
+    /* GLobal classes */
+    .bg-img {
+      background-image: url(${bgImg});
+    }
+
+    .bg-black {
+      background-color: rgba(16,17,18, 0.5);
+    }
   }
 
-  .bg-img {
-    background-image: url(${bgImg});
+  input {
+    outline: none;
   }
-
-  .bg-black {
-    background-color: rgba(16,17,18, 0.5);
+  
+  a {
+    text-decoration: none;
+    color: inherit;
   }
-
-  /* Switching the swipers buttons styles*/
 `;
 
 export default GlobalStyle;

@@ -1,6 +1,6 @@
 /* Style */
-import GlobalStyle from "./assets/stylesGlobal/GlobalStyle";
-import ResetStyle from "./assets/stylesGlobal/ResetStyle";
+import ResetStyle from "./assets/stylesGlobal/Reset";
+import GlobalStyle from "./assets/stylesGlobal/Global";
 import App from "./App";
 
 /* Logic */

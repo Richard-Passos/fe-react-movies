@@ -1,7 +1,7 @@
 /* Style */
 import { MainHeader, LogoContainer } from "./HeaderStyle";
 import { Link } from "react-router-dom";
-import Logo from "../../../assets/img/fultureLogo.png";
+import Logo from "../../../assets/imgs/fultureLogo.png";
 
 /* Logic */
 import { useEffect, useState } from "react";

@@ -50,13 +50,6 @@ const ResetStyle = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
-  input {
-    outline: none;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
 `;
 
 export default ResetStyle
