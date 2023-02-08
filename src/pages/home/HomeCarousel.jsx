@@ -20,8 +20,8 @@ export default function HomeCarousel() {
   }, []);
 
   return (
-    <Container className="bg-img">
-      <Carousel subtitle="Popular" movies={popularMovies} />
+    <Container className="bgImg">
+      <Carousel subtitle="Populares" movies={popularMovies} />
       <Carousel subtitle="Melhores avaliados" movies={topRatedMovies} />
       <Carousel subtitle="Em cartaz" movies={cinemaMovies} />
       <Carousel subtitle="Em breve" movies={comingSoonMovies} />

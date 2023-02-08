@@ -6,16 +6,12 @@ import styled from "styled-components";
 
 export const ContainerDetails = styled.div`
   width: 100%;
-  max-width: 200rem;
-  margin: 5rem auto 0;
-  padding: 3.5rem;
-  border-radius: 0.5rem;
-  height: fit-content;
+  padding: 3.5rem 2.5rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem 5rem;
+  gap: 5rem;
 
   .darkRed {
     color: ${Colors.darkRed};
@@ -28,5 +24,9 @@ export const ContainerDetails = styled.div`
 
   @media screen and (max-width: 1000px) {
     flex-direction: column;
+  }
+
+  @media screen and (min-width: 2000px) {
+    margin: 3.5rem 0;
   }
 `;

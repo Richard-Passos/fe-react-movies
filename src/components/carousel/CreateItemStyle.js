@@ -7,7 +7,6 @@ import styled from "styled-components";
 export const Item = styled.div`
   width: 15rem;
   flex: none;
-  margin: 0 1rem;
 
   .link {
     display: inline-block;
@@ -17,7 +16,7 @@ export const Item = styled.div`
 
 export const ItemImg = styled.img`
   width: 100%;
-  border: 2px solid transparent;
+  border: 0.2rem solid transparent;
   border-radius: 0.5rem;
   transition: all 0.2s ease;
   pointer-events: none;

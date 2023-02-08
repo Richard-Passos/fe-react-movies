@@ -42,14 +42,14 @@ export const ContainerText = styled.div`
     position: absolute;
   }
   ::before {
-    width: 5px;
-    height: 150px;
+    width: .5rem;
+    height: 15rem;
     top: 0;
     left: 0;
   }
   ::after {
-    width: 150px;
-    height: 5px;
+    width: 15rem;
+    height: .5rem;
     top: 0;
     left: 0;
   }
@@ -71,32 +71,32 @@ export const Genre = styled.span`
   /* Genre bottom border */
   ::before {
     content: "";
-    height: 1px;
+    height: .1rem;
     width: 100%;
     background-color: ${Colors.lightRed};
     position: absolute;
-    bottom: -2px;
+    bottom: -.2rem;
   }
 `;
 
 export const Sinopse = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 
   .subtitle {
     font-size: 2rem;
   }
 
   .description {
-    max-height: 200px;
+    max-height: 20rem;
     overflow-y: auto;
     padding-left: 0.5rem;
     line-height: 1.5;
 
     /* ScrollBar style */
     ::-webkit-scrollbar {
-      width: 10px;
+      width: 1rem;
       background-color: #000;
     }
     ::-webkit-scrollbar-track {

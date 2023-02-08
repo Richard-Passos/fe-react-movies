@@ -8,7 +8,7 @@ export const ContainerExtra = styled.div`
   width: 100%;
   max-width: 15rem;
   padding: 1rem;
-  border: 1px dashed ${Colors.darkRed};
+  border: 0.1rem dashed ${Colors.darkRed};
   border-radius: 0.5rem;
 
   display: flex;

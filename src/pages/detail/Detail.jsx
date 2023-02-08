@@ -6,6 +6,7 @@ import { ContainerImg } from "./containersStyle/CImg";
 import { ContainerText, Sinopse, Genre } from "./containersStyle/CTextStyle";
 import { ContainerExtra } from "./containersStyle/CExtra";
 import { BtnTrailer, ButtonHome } from "./buttonsStyle";
+import ImgNotFound from "../../assets/imgs/imgNotFound.png";
 
 /* Logic */
 import { Link, useParams } from "react-router-dom";
@@ -29,14 +30,19 @@ export default function Detail() {
     getVideo(movie.id, setVideo);
   }, [movie]);
 
-  console.log(video)
-
   return (
     <>
-      <Header />
-      <ContainerDetails className="darkRed">
+      <Header detailPage={true}/>
+      <ContainerDetails className="bgImg">
         <ContainerImg>
-          <img src={BASE_URL_IMG + movie.poster_path} alt={movie.title} />
+          <img
+            src={
+              movie?.poster_path
+                ? BASE_URL_IMG + movie.poster_path
+                : ImgNotFound
+            }
+            alt={movie.title}
+          />
         </ContainerImg>
 
         <ContainerText>
@@ -61,7 +67,7 @@ export default function Detail() {
           <ContainerExtra>
             <div>
               <span className="darkRed">Nota</span>
-              <p>{movie.vote_average}</p>
+              <p>{movie.vote_average?.toFixed(1)}</p>
             </div>
 
             <div>
@@ -77,8 +83,8 @@ export default function Detail() {
               <Link
                 to={
                   video[1]?.key !== undefined
-                  ? BASE_URL_VIDEO + video[1]?.key
-                  : BASE_URL_VIDEO + video[0]?.key
+                    ? BASE_URL_VIDEO + video[1]?.key
+                    : BASE_URL_VIDEO + video[0]?.key
                 }
               >
                 <BtnTrailer>Trailer</BtnTrailer>

@@ -10,7 +10,7 @@ export const ContainerImg = styled.picture`
 
   img {
     width: 100%;
-    border: 2px solid ${Colors.darkRed};
+    border: .2rem solid ${Colors.darkRed};
     border-radius: 0.5rem;
     transition: all 0.5s ease;
 

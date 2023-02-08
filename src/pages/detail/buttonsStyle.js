@@ -8,7 +8,7 @@ export const BtnTrailer = styled.button`
   width: 90%;
   max-width: 10rem;
   padding: 1rem 1.5rem;
-  border: 1px solid ${Colors.darkRed};
+  border: .1rem solid ${Colors.darkRed};
   border-radius: 0.5rem;
   background-color: transparent;
   color: ${Colors.lightGray};

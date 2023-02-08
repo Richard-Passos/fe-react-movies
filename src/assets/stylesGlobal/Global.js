@@ -12,18 +12,20 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 10px;
+
+    @media screen and (min-width: 2000px) {
+      font-size: 20px;
+    }
   }
 
   body {
     min-height: 100vh;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
     background: radial-gradient(at 30% top, #30172a 0%, rgba(3, 37, 65, 1));
     overflow-x: hidden;
     color: ${Colors.darkGray};
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
 
     /* ScrollBar style */
@@ -39,13 +41,19 @@ const GlobalStyle = createGlobalStyle`
     }
 
     /* GLobal classes */
-    .bg-img {
+    .bgImg {
       background-image: url(${bgImg});
     }
+  }
 
-    .bg-black {
-      background-color: rgba(16,17,18, 0.5);
-    }
+  #root {
+    width: 100%;
+    max-width: 200rem;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   input {

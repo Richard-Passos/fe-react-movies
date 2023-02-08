@@ -1,31 +1,14 @@
 /* Style */
-import { MainHeader, LogoContainer } from "./HeaderStyle";
-import { Link } from "react-router-dom";
-import Logo from "../../../assets/imgs/fultureLogo.png";
+import { MainHeader, Link, Logo } from "./HeaderStyle";
+import LogoImg from "../../../assets/imgs/fultureLogo.png";
 
-/* Logic */
-import { useEffect, useState } from "react";
-
-function Header() {
-
-  const [bgBlack, setBgBlack] = useState(false)
-
-  useEffect(() => {
-    const scrollEvent = () => {
-      if(window.scrollY > 30) {
-        setBgBlack(true)
-      } else {
-        setBgBlack(false)
-      }
-    }
-
-    window.addEventListener("scroll", scrollEvent);
-    return () => window.removeEventListener("scroll", scrollEvent)
-  }, [])
+function Header({ detailPage, bgBlack }) {
   return (
-    <MainHeader className={bgBlack ? "bg-black" : ""}>
+    <MainHeader
+      className={(detailPage ? "detailPage" : "" || bgBlack ? "bgBlack" : "")}
+    >
       <Link to={`/`}>
-        <LogoContainer src={Logo} />
+        <Logo src={LogoImg} />
       </Link>
     </MainHeader>
   );

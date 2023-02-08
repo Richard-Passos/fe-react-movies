@@ -1,6 +1,5 @@
 /* Style */
 import { Colors } from "../../assets/stylesGlobal/Colors";
-
 /* Logic */
 import styled from "styled-components";
 
@@ -19,12 +18,14 @@ export const Container = styled.section`
 `;
 
 export const MainCarousel = styled.div`
-  margin: 0 4rem;
-  padding: 1.5rem 0;
+  width: 92%;
+  margin: 0 auto;
+  padding: 1.5rem 1.4rem;
   overflow-x: auto;
   scroll-behavior: smooth;
 
   display: flex;
+  gap: 2rem;
 
   ::-webkit-scrollbar {
     display: none;
@@ -37,34 +38,40 @@ export const MainCarousel = styled.div`
 
 export const Arrow = styled.div`
   color: ${Colors.darkRed};
-  height: 80px;
-  padding: 0 2.5rem;
-  border-radius: 100%;
+  height: 72.5%;
+  padding: 0 2rem;
+  background-color: rgba(16, 17, 18, 0.7) /* Colors.darkGray */;
   font-size: 5rem;
   transition: all 0.2s ease;
+
   position: absolute;
-  top: 40%;
   z-index: 3;
 
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
+
+  ${Container}:hover & {
+    display: flex;
+  }
 
   :hover {
     cursor: pointer;
     color: ${Colors.lightRed};
-    background-color: rgba(16, 17, 18, 0.35) /* Colors.darkGray */;
+    background-color: rgba(23, 24, 25, 0.7);
   }
 
   @media screen and (max-width: 600px) {
-    display: none;
+    display: none !important;
   }
 
   &.prev {
-    left: 10px;
+    left: 1rem;
+    border-radius: 1rem 0 0 1rem;
   }
 
   &.next {
-    right: 10px;
+    right: 1rem;
+    border-radius: 0 1rem 1rem 0;
   }
 `;
