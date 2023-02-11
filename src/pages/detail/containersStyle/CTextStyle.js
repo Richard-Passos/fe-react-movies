@@ -17,7 +17,8 @@ export const ContainerText = styled.div`
   gap: 2rem;
 
   .title {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    line-height: 1.2;
   }
 
   .genres {
@@ -95,12 +96,12 @@ export const Sinopse = styled.div`
   .description {
     max-height: 20rem;
     overflow-y: auto;
-    padding-left: 0.5rem;
+    padding: 0 0.5rem;
     line-height: 1.5;
 
     /* ScrollBar style */
     ::-webkit-scrollbar {
-      width: 1rem;
+      width: .5rem;
       background-color: #000;
     }
     ::-webkit-scrollbar-track {
