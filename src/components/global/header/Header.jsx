@@ -2,10 +2,12 @@
 import { MainHeader, Link, Logo } from "./HeaderStyle";
 import LogoImg from "../../../assets/imgs/fultureLogo.png";
 
-function Header({ detailPage, bgBlack }) {
+function Header({ mainPage, bgBlack }) {
   return (
     <MainHeader
-      className={(detailPage ? "detailPage" : "" || bgBlack ? "bgBlack" : "")}
+      className={
+        `${mainPage ? "mainPage" : ""} ${bgBlack ? "bgBlack" : ""}`
+      }
     >
       <Link to={`/`}>
         <Logo src={LogoImg} />

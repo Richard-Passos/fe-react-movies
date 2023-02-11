@@ -9,17 +9,18 @@ import styled from "styled-components";
 export const MainHeader = styled.header`
   ${DefaultStyle}
 
-  position: fixed;
-  z-index: 5;
-  transition: background-color 0.5s ease;
+  position: initial;
+  background-color: ${Colors.darkGray};
+
+  &.mainPage {
+    position: fixed;
+    z-index: 5;
+    transition: background-color 0.5s ease;
+    background-color: transparent;
+  }
 
   &.bgBlack {
     background-color: rgba(16, 17, 18, 0.9) /* Colors.darkGray */;
-  }
-
-  &.detailPage {
-    position: initial;
-    background-color: ${Colors.darkGray};
   }
 `;
 

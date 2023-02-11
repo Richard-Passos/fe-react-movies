@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <>
-      <Header bgBlack={bgBlack} />
+      <Header mainPage={true} bgBlack={bgBlack} />
       <HomeCarousel />
       <Footer />
     </>

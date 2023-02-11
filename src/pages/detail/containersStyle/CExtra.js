@@ -10,11 +10,16 @@ export const ContainerExtra = styled.div`
   padding: 1rem;
   border: 0.1rem dashed ${Colors.darkRed};
   border-radius: 0.5rem;
+  transition: border-color .2s ease;
 
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 2rem;
+
+  :hover {
+    border-color: ${Colors.lightRed};
+  }
 
   div {
     display: flex;

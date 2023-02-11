@@ -1,6 +1,6 @@
 /* Styles */
 import { Container, MainCarousel, Arrow } from "./CarouselStyle";
-import CreateItem from "./CreateItem";
+import CreateItens from "./CreateItens";
 
 /* Logic */
 import { useState, useEffect, useRef } from "react";
@@ -30,7 +30,7 @@ export default function SectionMovie({ subtitle, movies }) {
       <p className="subtitle">{subtitle}</p>
 
       <MainCarousel ref={carousel}>
-        <CreateItem movies={movies} />
+        <CreateItens movies={movies} />
 
         <Arrow className="prev" onClick={handleArrows}>
           {"<"}

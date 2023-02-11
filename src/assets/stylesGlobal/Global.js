@@ -44,6 +44,15 @@ const GlobalStyle = createGlobalStyle`
     .bgImg {
       background-image: url(${bgImg});
     }
+
+    .darkRed {
+      color: ${Colors.darkRed};
+      transition: color 0.2s ease;
+
+      :hover {
+        color: ${Colors.lightRed};
+      }
+    }
   }
 
   #root {

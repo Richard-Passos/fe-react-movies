@@ -54,7 +54,7 @@ export default function Detail() {
                 {name}
               </Genre>
             ))}
-          </div>
+          </div> 
 
           <Sinopse>
             <p className="subtitle">Sinopse</p>

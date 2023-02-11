@@ -8,7 +8,7 @@ export const ContainerText = styled.div`
   width: 100%;
   max-width: 70rem;
   padding: 2rem;
-  color: ${Colors.lightGray};
+  color: ${Colors.white};
   font-size: 1.4rem;
   position: relative;
 
@@ -86,6 +86,10 @@ export const Sinopse = styled.div`
 
   .subtitle {
     font-size: 2rem;
+
+    span {
+      color: ${Colors.darkRed};
+    }
   }
 
   .description {

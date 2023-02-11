@@ -8,15 +8,15 @@ export const BtnTrailer = styled.button`
   width: 90%;
   max-width: 10rem;
   padding: 1rem 1.5rem;
-  border: .1rem solid ${Colors.darkRed};
+  border: 0.1rem solid ${Colors.darkRed};
   border-radius: 0.5rem;
   background-color: transparent;
-  color: ${Colors.lightGray};
+  color: ${Colors.white};
   font-size: 1.6rem;
   transition: all 0.2s ease;
 
   :hover {
-    background-color: ${Colors.darkRed};
+    background-color: ${Colors.lightRed};
     color: ${Colors.darkGray};
     cursor: pointer;
   }
@@ -27,12 +27,12 @@ export const ButtonHome = styled.button`
   border: 1px solid ${Colors.darkRed};
   border-radius: 0.5rem;
   background-color: transparent;
-  color: ${Colors.lightGray};
+  color: ${Colors.white};
   font-size: 2rem;
   transition: all 0.2s ease;
 
   :hover {
-    background-color: ${Colors.darkRed};
+    background-color: ${Colors.lightRed};
     color: ${Colors.darkGray};
     cursor: pointer;
   }
