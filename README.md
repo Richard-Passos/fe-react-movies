@@ -1,21 +1,21 @@
 <h1 align="center">:file_cabinet: Fullflix</h1>
 
 ## :memo: Descrição
-Desafio Fullture, fazer site de filmes com api axios e styled-components.
+Desafio Fullture, Site com listagem de filmes, usando a api Tmdb
 
 ## :wrench: Tecnologias utilizadas
-* HTML;
-* CSS;
-* JavaScript;
 * React;
-* styled-components;
-* axios;
-* swiper;
+* Html;
+* JavaScript;
+
+* Axios;
+* Styled-components;
+* React-router-dom
 
 ## :rocket: Rodando o projeto
 Para rodar o repositório é recomendado acessar:
 ```
-https://react-movies-richardp-fullture-school.netlify.app/
+https://react-movies-fullflix.vercel.app/
 ```
 
 ## :handshake: Colaboradores
@@ -33,4 +33,4 @@ https://react-movies-richardp-fullture-school.netlify.app/
 </table>
 
 ## :dart: Status do projeto
-Em produção
+Finalizado
