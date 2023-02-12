@@ -1,5 +1,4 @@
 /* Style */
-import { Colors } from "../../../assets/stylesGlobal/Colors";
 import DefaultStyle from "../DefaultStyle";
 
 /* Logic */
