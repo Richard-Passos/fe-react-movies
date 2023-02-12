@@ -1,24 +1,23 @@
 /* Style */
-import { Colors } from "../../../assets/stylesGlobal/Colors";
+import { Colors } from "../../../../assets/stylesGlobal/Colors";
 
 /* Logic */
 import styled from "styled-components";
 
 export const ContainerExtra = styled.div`
-  width: 100%;
-  max-width: 15rem;
-  padding: 1rem;
-  border: 0.1rem dashed ${Colors.darkRed};
+  padding: 1.5rem 2rem;
+  background-color: rgb(${Colors.darkGray});
   border-radius: 0.5rem;
-  transition: border-color .2s ease;
+  transition: background-color 0.2s ease;
 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 2rem;
 
   :hover {
-    border-color: ${Colors.lightRed};
+    background-color: rgba(${Colors.darkGray}, .5);
   }
 
   div {

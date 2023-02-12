@@ -3,17 +3,42 @@ import { Link } from "react-router-dom";
 import { Item, ItemImg } from "./CreateItemStyle";
 import ImgNotFound from "../../assets/imgs/imgNotFound.png";
 
-const BASE_URL_IMG = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2";
+const BASE_URL_IMG = "https://image.tmdb.org/t/p/original";
 
-export default function CreateItens({ movies }) {
-  return movies.map(({ id, poster_path, title }) => (
-    <Item key={"key slide " + id}>
-      <Link to={`/detail/${id}`} className="link">
-        <ItemImg
-          src={poster_path ? BASE_URL_IMG + poster_path : ImgNotFound}
-          alt={title}
-        />
-      </Link>
-    </Item>
-  ));
+export default function CreateItens({ itens }) {
+  return itens.map(
+    (item) =>
+      (item.poster_path || item.profile_path) && (
+        <Item
+          key={"key slide " + item.id}
+          className="castItem" /* Use on DetailsCast */
+        >
+          <Link
+            to={
+              !item.profile_path
+                ? `/detail/${item.id}`
+                : `https://www.instagram.com/${item.name.replaceAll(" ", "")}`
+            }
+            className="link"
+          >
+            <ItemImg
+              src={
+                item.poster_path
+                  ? BASE_URL_IMG + item.poster_path
+                  : item.profile_path
+                  ? BASE_URL_IMG + item.profile_path
+                  : ImgNotFound
+              }
+              alt={item.title}
+            />
+
+            {
+              item.profile_path && (
+                <p className="castName">{item.name}</p>
+              ) /* Use on DetailsCast */
+            }
+          </Link>
+        </Item>
+      )
+  );
 }

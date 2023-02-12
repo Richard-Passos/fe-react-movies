@@ -3,27 +3,24 @@ import { Colors } from "../../assets/stylesGlobal/Colors";
 
 /* Logic */
 import styled from "styled-components";
+import pageNotFound from "../../assets/imgs/pageNotFound.svg";
 
-export const MainContaier = styled.main`
+export const Contaier = styled.main`
   width: 100%;
   min-height: 100vh;
-  color: ${Colors.lightGray};
+  padding: 3rem;
+
+  background-image: url(${pageNotFound});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 2rem;
-
-  .title {
-    font-size: 3rem;
-  }
-
-  .text {
-    font-size: 1.4rem;
-  }
+  align-items: flex-start;
 
   button {
-
+    background-color: rgb(${Colors.white});
+    color: rgb(${Colors.black});
   }
-`
+`;

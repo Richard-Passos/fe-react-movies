@@ -19,45 +19,42 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    min-height: 100vh;
     font-family: 'Libre Franklin', sans-serif;
-    background: radial-gradient(at 30% top, #30172a 0%, rgba(3, 37, 65, 1));
+    color: rgb(${Colors.white});
+    background-color: rgb(${Colors.darkGray});
     overflow-x: hidden;
-    color: ${Colors.darkGray};
+
+    background-image: url(${bgImg});
+
+    background-repeat: no-repeat;
 
     display: flex;
     justify-content: center;
 
     /* ScrollBar style */
     ::-webkit-scrollbar {
-      width: 5px;
-      background-color: #000;
+      width: .5rem;
     }
     ::-webkit-scrollbar-track {
-      background-color: ${Colors.darkGray};
+      background-color: rgb(${Colors.black});
     }
     ::-webkit-scrollbar-thumb {
-      background-color: ${Colors.lightRed};
+      background-color: rgb(${Colors.lightRed});
     }
 
     /* GLobal classes */
-    .bgImg {
-      background-image: url(${bgImg});
-    }
-
     .darkRed {
-      color: ${Colors.darkRed};
+      color: rgb(${Colors.darkRed});
       transition: color 0.2s ease;
 
       :hover {
-        color: ${Colors.lightRed};
+        color: rgb(${Colors.lightRed});
       }
     }
   }
 
   #root {
     width: 100%;
-    max-width: 200rem;
     min-height: 100vh;
 
     display: flex;

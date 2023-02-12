@@ -8,19 +8,18 @@ import styled from "styled-components";
 
 export const MainHeader = styled.header`
   ${DefaultStyle}
-
-  position: initial;
-  background-color: ${Colors.darkGray};
+  
+  transition: background-color 0.5s ease;
 
   &.mainPage {
+    background-color: transparent;
+
     position: fixed;
     z-index: 5;
-    transition: background-color 0.5s ease;
-    background-color: transparent;
   }
 
   &.bgBlack {
-    background-color: rgba(16, 17, 18, 0.9) /* Colors.darkGray */;
+    background-color: rgba(${Colors.black}, 0.9) /* Colors.black */;
   }
 `;
 
@@ -34,6 +33,6 @@ export const Link = styled(link)`
 export const Logo = styled.img`
   width: 135%;
   margin: -2.3rem;
-  color: ${Colors.darkRed} /* Alt color */;
+  color: rgb(${Colors.darkRed}) /* Alt color */;
   font-size: 2rem /* Alt font-size */;
 `;

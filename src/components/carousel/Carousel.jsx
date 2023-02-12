@@ -5,7 +5,7 @@ import CreateItens from "./CreateItens";
 /* Logic */
 import { useState, useEffect, useRef } from "react";
 
-export default function SectionMovie({ subtitle, movies }) {
+export default function Carousel({ subtitle, itens }) {
   const carousel = useRef(null);
 
   const [scrollLeftState, setScrollLeftState] = useState(0);
@@ -30,7 +30,7 @@ export default function SectionMovie({ subtitle, movies }) {
       <p className="subtitle">{subtitle}</p>
 
       <MainCarousel ref={carousel}>
-        <CreateItens movies={movies} />
+        <CreateItens itens={itens} />
 
         <Arrow className="prev" onClick={handleArrows}>
           {"<"}
