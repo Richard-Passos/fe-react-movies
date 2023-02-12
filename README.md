@@ -15,7 +15,7 @@ Desafio Fullture, Site com listagem de filmes, usando a api Tmdb
 ## :rocket: Rodando o projeto
 Para rodar o repositório é recomendado acessar:
 ```
-https://react-movies-richardp-fullture-school.netlify.app/
+https://react-movies-fullflix.vercel.app/
 ```
 
 ## :handshake: Colaboradores
