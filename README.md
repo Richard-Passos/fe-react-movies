@@ -1,29 +1,28 @@
-<h1 align="center">:file_cabinet: Fullflix</h1>
+<h1 align="center">:file_cabinet: React Movies</h1>
 
-## :memo: Descrição
+## :memo: Description
 Desafio Fullture, Site com listagem de filmes, usando a api Tmdb
 
-## :wrench: Tecnologias utilizadas
-* React;
-* Html;
-* JavaScript;
-
-* Axios;
-* Styled-components;
+## :wrench: Technologies used
+* React
+* Html
+* JavaScript
+* Axios
+* Styled-components
 * React-router-dom
 
-## :rocket: Rodando o projeto
-Para rodar o repositório é recomendado acessar:
+## :rocket: Running the project
+### To run the repository, it is recommended to access:
 ```
-https://react-movies-fullflix.vercel.app/
+https://project-url.com
 ```
 
-## :handshake: Colaboradores
+## :handshake: Team
 <table>
   <tr>
     <td align="center">
       <a href="https://github.com/Richard-Passos">
-        <img src="https://img.freepik.com/vetores-premium/desenho-de-desenho-animado-de-um-programador_29937-8176.jpg" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
+        <img src="https://img.freepik.com/vetores-premium/desenho-de-desenho-animado-de-um-programador_29937-8176.jpg" width="100px;" alt="A boy with headphones holding a laptop."/><br>
         <sub>
           <b>Richard P</b>
         </sub>
@@ -32,5 +31,5 @@ https://react-movies-fullflix.vercel.app/
   </tr>
 </table>
 
-## :dart: Status do projeto
-Finalizado
+## :dart: Project status
+Finished
