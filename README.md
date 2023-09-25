@@ -1,7 +1,11 @@
 <h1 align="center">:file_cabinet: React Movies</h1>
 
+<br>
+
 ## :memo: Description
 Desafio Fullture, Site com listagem de filmes, usando a api Tmdb
+
+<br>
 
 ## :wrench: Technologies used
 * React
@@ -10,10 +14,14 @@ Desafio Fullture, Site com listagem de filmes, usando a api Tmdb
 * Styled-components
 * JavaScript
 
+<br>
+
 ## :rocket: Run project
 ```
 https://react-movies-fullflix.vercel.app/
 ```
+
+<br>
 
 ## :handshake: Team
 <table>
@@ -29,5 +37,7 @@ https://react-movies-fullflix.vercel.app/
   </tr>
 </table>
 
-## :dart: Project status
+<br>
+
+## :dart: Status
 Finished
