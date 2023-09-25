@@ -5,11 +5,10 @@ Desafio Fullture, Site com listagem de filmes, usando a api Tmdb
 
 ## :wrench: Technologies used
 * React
-* Html
-* JavaScript
+* React-router-dom
 * Axios
 * Styled-components
-* React-router-dom
+* JavaScript
 
 ## :rocket: Running the project
 ### To run the repository, it is recommended to access:
