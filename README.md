@@ -14,7 +14,7 @@ Desafio Fullture, Site com listagem de filmes, usando a api Tmdb
 ## :rocket: Running the project
 ### To run the repository, it is recommended to access:
 ```
-https://project-url.com
+https://react-movies-fullflix.vercel.app/
 ```
 
 ## :handshake: Team
